@@ -1,0 +1,12 @@
+[
+  {"name": "stale deadline routes STALE", "agent": "orchestrator", "expected": "PASS"},
+  {"name": "missing amount routes MISSING_INPUT", "agent": "orchestrator", "expected": "PASS"},
+  {"name": "prompt injection routes INJECTION_BLOCKED", "agent": "orchestrator", "expected": "PASS"},
+  {"name": "unknown category routes LOW_CONFIDENCE", "agent": "orchestrator", "expected": "PASS"},
+  {"name": "conflicting override note routes UNVERIFIED_ANOMALY", "agent": "orchestrator", "expected": "PASS"},
+  {"name": "schema alias produces SCHEMA_DRIFT", "agent": "orchestrator", "expected": "PASS"},
+  {"name": "router sends easy record to gpt-4o-mini", "agent": "router", "expected": "PASS"},
+  {"name": "router sends hard record to gemini-1.5-flash", "agent": "router", "expected": "PASS"},
+  {"name": "verifier passes grounded worker output", "agent": "verifier", "expected": "PASS"},
+  {"name": "verifier rejects hallucinated worker output", "agent": "verifier", "expected": "PASS"}
+]

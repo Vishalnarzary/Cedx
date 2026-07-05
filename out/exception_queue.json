@@ -1,0 +1,352 @@
+[
+  {
+    "agent_trace": [
+      {
+        "agent": "orchestrator",
+        "cost_usd": 0.0,
+        "detail": "record accepted from intake",
+        "latency_ms": 1,
+        "model": null,
+        "prompt_version": "orchestrator-v1",
+        "retries": 0,
+        "status": "ok",
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "transcript_hash": null,
+        "verdict": null
+      },
+      {
+        "agent": "orchestrator",
+        "cost_usd": 0.0,
+        "detail": "routed to exception queue: STALE",
+        "latency_ms": 1,
+        "model": null,
+        "prompt_version": "orchestrator-v1",
+        "retries": 0,
+        "status": "routed",
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "transcript_hash": null,
+        "verdict": null
+      }
+    ],
+    "approval_trail": [
+      {
+        "actor": "orchestrator",
+        "reason": "STALE",
+        "state": "blocked",
+        "ts": "2026-07-05T12:18:23+00:00"
+      }
+    ],
+    "delivered_fields": null,
+    "delivered_fields_hash": null,
+    "id": "REC-011",
+    "reason_class": "A",
+    "reason_code": "STALE",
+    "source_format": "feed",
+    "source_version_hash": "sha256:7be77b7b06c1a8e589a4a544b73049ee5d1ae4c8846b0da930994a522ede0fd4",
+    "status": "exception",
+    "transcript_hash": null,
+    "version": 1
+  },
+  {
+    "agent_trace": [
+      {
+        "agent": "orchestrator",
+        "cost_usd": 0.0,
+        "detail": "record accepted from intake",
+        "latency_ms": 1,
+        "model": null,
+        "prompt_version": "orchestrator-v1",
+        "retries": 0,
+        "status": "ok",
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "transcript_hash": null,
+        "verdict": null
+      },
+      {
+        "agent": "orchestrator",
+        "cost_usd": 0.0,
+        "detail": "routed to exception queue: MISSING_INPUT",
+        "latency_ms": 1,
+        "model": null,
+        "prompt_version": "orchestrator-v1",
+        "retries": 0,
+        "status": "routed",
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "transcript_hash": null,
+        "verdict": null
+      }
+    ],
+    "approval_trail": [
+      {
+        "actor": "orchestrator",
+        "reason": "MISSING_INPUT",
+        "state": "blocked",
+        "ts": "2026-07-05T12:18:23+00:00"
+      }
+    ],
+    "delivered_fields": null,
+    "delivered_fields_hash": null,
+    "id": "REC-012",
+    "reason_class": "A",
+    "reason_code": "MISSING_INPUT",
+    "source_format": "feed",
+    "source_version_hash": "sha256:46ce4d7e303cb49e2301c29d40b39e622879115098bcfa0e7ff0f9d98367f661",
+    "status": "exception",
+    "transcript_hash": null,
+    "version": 1
+  },
+  {
+    "agent_trace": [
+      {
+        "agent": "orchestrator",
+        "cost_usd": 0.0,
+        "detail": "record accepted from intake",
+        "latency_ms": 1,
+        "model": null,
+        "prompt_version": "orchestrator-v1",
+        "retries": 0,
+        "status": "ok",
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "transcript_hash": null,
+        "verdict": null
+      },
+      {
+        "agent": "orchestrator",
+        "cost_usd": 0.0,
+        "detail": "routed to exception queue: OUTLIER",
+        "latency_ms": 1,
+        "model": null,
+        "prompt_version": "orchestrator-v1",
+        "retries": 0,
+        "status": "routed",
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "transcript_hash": null,
+        "verdict": null
+      }
+    ],
+    "approval_trail": [
+      {
+        "actor": "orchestrator",
+        "reason": "OUTLIER",
+        "state": "blocked",
+        "ts": "2026-07-05T12:18:23+00:00"
+      }
+    ],
+    "delivered_fields": null,
+    "delivered_fields_hash": null,
+    "id": "REC-013",
+    "reason_class": "A",
+    "reason_code": "OUTLIER",
+    "source_format": "feed",
+    "source_version_hash": "sha256:6762f861b3ad0e04d296ede7fb75d3ce8bd6d615fe2fb7c9d66f5ee8a9cb2429",
+    "status": "exception",
+    "transcript_hash": null,
+    "version": 1
+  },
+  {
+    "agent_trace": [
+      {
+        "agent": "orchestrator",
+        "cost_usd": 0.0,
+        "detail": "record accepted from intake",
+        "latency_ms": 1,
+        "model": null,
+        "prompt_version": "orchestrator-v1",
+        "retries": 0,
+        "status": "ok",
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "transcript_hash": null,
+        "verdict": null
+      },
+      {
+        "agent": "orchestrator",
+        "cost_usd": 0.0,
+        "detail": "routed to exception queue: INJECTION_BLOCKED",
+        "latency_ms": 1,
+        "model": null,
+        "prompt_version": "orchestrator-v1",
+        "retries": 0,
+        "status": "routed",
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "transcript_hash": null,
+        "verdict": null
+      }
+    ],
+    "approval_trail": [
+      {
+        "actor": "orchestrator",
+        "reason": "INJECTION_BLOCKED",
+        "state": "blocked",
+        "ts": "2026-07-05T12:18:23+00:00"
+      }
+    ],
+    "delivered_fields": null,
+    "delivered_fields_hash": null,
+    "id": "REC-014",
+    "reason_class": "A",
+    "reason_code": "INJECTION_BLOCKED",
+    "source_format": "eml",
+    "source_version_hash": "sha256:c05806bea23684e50a4f9e23701956d031994e1ba0cd7e1e0f12345bdb61f6d9",
+    "status": "exception",
+    "transcript_hash": null,
+    "version": 1
+  },
+  {
+    "agent_trace": [
+      {
+        "agent": "orchestrator",
+        "cost_usd": 0.0,
+        "detail": "record accepted from intake",
+        "latency_ms": 1,
+        "model": null,
+        "prompt_version": "orchestrator-v1",
+        "retries": 0,
+        "status": "ok",
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "transcript_hash": null,
+        "verdict": null
+      },
+      {
+        "agent": "orchestrator",
+        "cost_usd": 0.0,
+        "detail": "routed to exception queue: LOW_CONFIDENCE",
+        "latency_ms": 1,
+        "model": null,
+        "prompt_version": "orchestrator-v1",
+        "retries": 0,
+        "status": "routed",
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "transcript_hash": null,
+        "verdict": null
+      }
+    ],
+    "approval_trail": [
+      {
+        "actor": "orchestrator",
+        "reason": "LOW_CONFIDENCE",
+        "state": "blocked",
+        "ts": "2026-07-05T12:18:23+00:00"
+      }
+    ],
+    "delivered_fields": null,
+    "delivered_fields_hash": null,
+    "id": "REC-015",
+    "reason_class": "A",
+    "reason_code": "LOW_CONFIDENCE",
+    "source_format": "pdf",
+    "source_version_hash": "sha256:a499090bbc37ce714c057b598a72ba850c6358363a97094613f4fc0e3add7696",
+    "status": "exception",
+    "transcript_hash": null,
+    "version": 1
+  },
+  {
+    "agent_trace": [
+      {
+        "agent": "orchestrator",
+        "cost_usd": 0.0,
+        "detail": "record accepted from intake",
+        "latency_ms": 1,
+        "model": null,
+        "prompt_version": "orchestrator-v1",
+        "retries": 0,
+        "status": "ok",
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "transcript_hash": null,
+        "verdict": null
+      },
+      {
+        "agent": "orchestrator",
+        "cost_usd": 0.0,
+        "detail": "routed to exception queue: LOW_CONFIDENCE",
+        "latency_ms": 1,
+        "model": null,
+        "prompt_version": "orchestrator-v1",
+        "retries": 0,
+        "status": "routed",
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "transcript_hash": null,
+        "verdict": null
+      }
+    ],
+    "approval_trail": [
+      {
+        "actor": "orchestrator",
+        "reason": "LOW_CONFIDENCE",
+        "state": "blocked",
+        "ts": "2026-07-05T12:18:23+00:00"
+      }
+    ],
+    "delivered_fields": null,
+    "delivered_fields_hash": null,
+    "id": "REC-021",
+    "reason_class": "A",
+    "reason_code": "LOW_CONFIDENCE",
+    "source_format": "feed",
+    "source_version_hash": "sha256:6c31b41ddce2721bbf39c878772b039453be6a84d7b54d51eed4177e0c53ed13",
+    "status": "exception",
+    "transcript_hash": null,
+    "version": 1
+  },
+  {
+    "agent_trace": [
+      {
+        "agent": "orchestrator",
+        "cost_usd": 0.0,
+        "detail": "record accepted from intake",
+        "latency_ms": 1,
+        "model": null,
+        "prompt_version": "orchestrator-v1",
+        "retries": 0,
+        "status": "ok",
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "transcript_hash": null,
+        "verdict": null
+      },
+      {
+        "agent": "orchestrator",
+        "cost_usd": 0.0,
+        "detail": "routed to exception queue: UNVERIFIED_ANOMALY",
+        "latency_ms": 1,
+        "model": null,
+        "prompt_version": "orchestrator-v1",
+        "retries": 0,
+        "status": "routed",
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "transcript_hash": null,
+        "verdict": null
+      }
+    ],
+    "approval_trail": [
+      {
+        "actor": "orchestrator",
+        "reason": "UNVERIFIED_ANOMALY",
+        "state": "blocked",
+        "ts": "2026-07-05T12:18:23+00:00"
+      }
+    ],
+    "delivered_fields": null,
+    "delivered_fields_hash": null,
+    "id": "REC-022",
+    "reason_class": "A",
+    "reason_code": "UNVERIFIED_ANOMALY",
+    "source_format": "feed",
+    "source_version_hash": "sha256:3bc9a915ce555a26a00d6c5f665c74e892c4caacb2c91edc4d24f993d9c6ed03",
+    "status": "exception",
+    "transcript_hash": null,
+    "version": 1
+  }
+]

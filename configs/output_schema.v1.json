@@ -1,0 +1,13 @@
+{
+  "version": "recruitment-staffing-output-v1",
+  "required": [
+    "case_id",
+    "industry",
+    "owner",
+    "deadline",
+    "service_line",
+    "work_order_amount",
+    "staffing_summary",
+    "source_version"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "agent": "staffing_worker",
+  "delivered_fields_hash": "sha256:e00a35575b735d3217fc34c1a221917e1f4c38ec90b2ac36b9ab495b4539f26a",
+  "model": "gpt-4o-mini",
+  "prompt_version": "staffing-worker-v1",
+  "request": {
+    "format": "toon",
+    "json_for_audit": {
+      "agent": "staffing_worker",
+      "model": "gpt-4o-mini",
+      "prompt_version": "staffing-worker-v1",
+      "record": {
+        "amount": 5200.0,
+        "category": "RENEWAL",
+        "deadline": "2026-07-20",
+        "id": "REC-002",
+        "notes": "Annual renewal, no changes.",
+        "owner": "b.ortiz",
+        "source_format": "feed",
+        "source_version_hash": "sha256:1d8698839ff3287c18b8eb81feefeb38bed10e2012dedad61d9664de6acd291e",
+        "version": 1
+      },
+      "task": "Create a Recruitment and Staffing delivery record using only source-supported fields."
+    },
+    "toon": "agent: staffing_worker\nmodel: gpt-4o-mini\nprompt_version: staffing-worker-v1\nrecord.amount: 5200.0\nrecord.category: RENEWAL\nrecord.deadline: 2026-07-20\nrecord.id: REC-002\nrecord.notes: Annual renewal, no changes.\nrecord.owner: b.ortiz\nrecord.source_format: feed\nrecord.source_version_hash: sha256:1d8698839ff3287c18b8eb81feefeb38bed10e2012dedad61d9664de6acd291e\nrecord.version: 1\ntask: Create a Recruitment and Staffing delivery record using only source-supported fields."
+  },
+  "request_format": "toon",
+  "response": {
+    "confidence": 0.97,
+    "delivered_fields": {
+      "case_id": "REC-002",
+      "deadline": "2026-07-20",
+      "industry": "Recruitment and Staffing",
+      "owner": "b.ortiz",
+      "service_line": "RENEWAL",
+      "source_version": 1,
+      "staffing_summary": "RENEWAL request for b.ortiz with amount 5200.",
+      "work_order_amount": 5200.0
+    },
+    "unsupported_claims": []
+  },
+  "response_hash": "sha256:cb917ae446f19f99df04358beee273e681fe76ecccf283d3b730cc10c9a03840"
+}

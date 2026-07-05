@@ -1,0 +1,8 @@
+{
+  "allowed": false,
+  "amendment": {
+    "role": "compliance",
+    "threshold": 40000
+  },
+  "reason": "normal approval missing"
+}

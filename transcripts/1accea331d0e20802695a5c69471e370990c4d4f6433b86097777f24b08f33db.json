@@ -1,0 +1,43 @@
+{
+  "agent": "staffing_worker",
+  "delivered_fields_hash": "sha256:8b944212c74fa52282fa52b8f9f2c0c73c39c3f309f0790fd30270f355ad8a5e",
+  "model": "gpt-4o-mini",
+  "prompt_version": "staffing-worker-v1",
+  "request": {
+    "format": "toon",
+    "json_for_audit": {
+      "agent": "staffing_worker",
+      "model": "gpt-4o-mini",
+      "prompt_version": "staffing-worker-v1",
+      "record": {
+        "amount": 5000.0,
+        "category": "REPORT",
+        "deadline": "2026-08-05",
+        "id": "REC-008",
+        "notes": "Routine report.",
+        "owner": "h.iqbal",
+        "source_format": "feed",
+        "source_version_hash": "sha256:3687cf2a80566e98bbb5d95d12dd82948850b660c97bc67160d408ba575ed072",
+        "version": 1
+      },
+      "task": "Create a Recruitment and Staffing delivery record using only source-supported fields."
+    },
+    "toon": "agent: staffing_worker\nmodel: gpt-4o-mini\nprompt_version: staffing-worker-v1\nrecord.amount: 5000.0\nrecord.category: REPORT\nrecord.deadline: 2026-08-05\nrecord.id: REC-008\nrecord.notes: Routine report.\nrecord.owner: h.iqbal\nrecord.source_format: feed\nrecord.source_version_hash: sha256:3687cf2a80566e98bbb5d95d12dd82948850b660c97bc67160d408ba575ed072\nrecord.version: 1\ntask: Create a Recruitment and Staffing delivery record using only source-supported fields."
+  },
+  "request_format": "toon",
+  "response": {
+    "confidence": 0.97,
+    "delivered_fields": {
+      "case_id": "REC-008",
+      "deadline": "2026-08-05",
+      "industry": "Recruitment and Staffing",
+      "owner": "h.iqbal",
+      "service_line": "REPORT",
+      "source_version": 1,
+      "staffing_summary": "REPORT request for h.iqbal with amount 5000.",
+      "work_order_amount": 5000.0
+    },
+    "unsupported_claims": []
+  },
+  "response_hash": "sha256:1accea331d0e20802695a5c69471e370990c4d4f6433b86097777f24b08f33db"
+}

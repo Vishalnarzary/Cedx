@@ -1,0 +1,1667 @@
+{
+  "agents": [
+    {
+      "can_call": [
+        "router",
+        "staffing_worker",
+        "verifier"
+      ],
+      "models": [],
+      "name": "orchestrator",
+      "prompt_version": "orchestrator-v1",
+      "role": "orchestrator"
+    },
+    {
+      "can_call": [],
+      "models": [],
+      "name": "router",
+      "prompt_version": "router-v1",
+      "role": "router"
+    },
+    {
+      "can_call": [],
+      "models": [
+        "gpt-4o-mini",
+        "gemini-1.5-flash"
+      ],
+      "name": "staffing_worker",
+      "prompt_version": "staffing-worker-v1",
+      "role": "worker"
+    },
+    {
+      "can_call": [],
+      "models": [
+        "gpt-4o-mini"
+      ],
+      "name": "verifier",
+      "prompt_version": "verifier-v1",
+      "role": "verifier"
+    }
+  ],
+  "amendment": {
+    "role": "compliance",
+    "threshold": 40000
+  },
+  "case_id": "CEDX-681ACE",
+  "cost": {
+    "avg_usd_per_record": 4.012e-05,
+    "p95_latency_ms": 1,
+    "projected_usd_per_10k": 0.4012,
+    "records": 23,
+    "total_usd": 0.00092265
+  },
+  "events": [
+    {
+      "action": "run_started",
+      "actor": "orchestrator",
+      "record_id": null,
+      "seed_dir": "seed",
+      "seq": 0,
+      "ts": "2026-07-03T05:09:28+00:00"
+    },
+    {
+      "action": "record_superseded",
+      "actor": "orchestrator",
+      "record_id": "REC-017",
+      "seq": 1,
+      "ts": "2026-07-03T05:09:30+00:00",
+      "version": 1
+    },
+    {
+      "action": "record_exception",
+      "actor": "orchestrator",
+      "reason_code": "STALE",
+      "record_id": "REC-011",
+      "seq": 2,
+      "ts": "2026-07-03T05:09:30+00:00"
+    },
+    {
+      "action": "record_exception",
+      "actor": "orchestrator",
+      "reason_code": "MISSING_INPUT",
+      "record_id": "REC-012",
+      "seq": 3,
+      "ts": "2026-07-03T05:09:30+00:00"
+    },
+    {
+      "action": "record_exception",
+      "actor": "orchestrator",
+      "reason_code": "OUTLIER",
+      "record_id": "REC-013",
+      "seq": 4,
+      "ts": "2026-07-03T05:09:30+00:00"
+    },
+    {
+      "action": "record_exception",
+      "actor": "orchestrator",
+      "reason_code": "INJECTION_BLOCKED",
+      "record_id": "REC-014",
+      "seq": 5,
+      "ts": "2026-07-03T05:09:30+00:00"
+    },
+    {
+      "action": "record_exception",
+      "actor": "orchestrator",
+      "reason_code": "LOW_CONFIDENCE",
+      "record_id": "REC-015",
+      "seq": 6,
+      "ts": "2026-07-03T05:09:30+00:00"
+    },
+    {
+      "action": "record_exception",
+      "actor": "orchestrator",
+      "reason_code": "LOW_CONFIDENCE",
+      "record_id": "REC-021",
+      "seq": 7,
+      "ts": "2026-07-03T05:09:30+00:00"
+    },
+    {
+      "action": "record_exception",
+      "actor": "orchestrator",
+      "reason_code": "UNVERIFIED_ANOMALY",
+      "record_id": "REC-022",
+      "seq": 8,
+      "ts": "2026-07-03T05:09:30+00:00"
+    },
+    {
+      "action": "run_completed",
+      "actor": "orchestrator",
+      "record_id": null,
+      "seq": 9,
+      "ts": "2026-07-03T05:09:30+00:00"
+    }
+  ],
+  "generated_at": "2026-07-03T05:09:30+00:00",
+  "output_package_hash": "sha256:7ecd31793d67ed56a2618127cb92f69a6bbd40b6eaf5151ad98a1162d71dd0b5",
+  "pipeline_now": "2026-06-26",
+  "pipeline_version": "recruiting-fleet-v1",
+  "records": [
+    {
+      "agent_trace": [
+        {
+          "agent": "orchestrator",
+          "cost_usd": 0.0,
+          "detail": "record accepted from intake",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "router",
+          "cost_usd": 0.0,
+          "detail": "easy task; selected gpt-4o-mini",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "router-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "staffing_worker",
+          "cost_usd": 6.63e-05,
+          "latency_ms": 1,
+          "model": "gpt-4o-mini",
+          "prompt_version": "staffing-worker-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 118,
+          "tokens_out": 81,
+          "transcript_hash": "sha256:e9c8fd7439ca57b8f07441714fecf6b99692d87b8a1b2348422eb3d0db643ef5",
+          "verdict": null
+        },
+        {
+          "agent": "orchestrator",
+          "cost_usd": null,
+          "detail": "cost budget exceeded",
+          "latency_ms": null,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "routed",
+          "tokens_in": null,
+          "tokens_out": null,
+          "transcript_hash": null,
+          "verdict": null
+        }
+      ],
+      "approval_trail": [
+        {
+          "actor": "orchestrator",
+          "reason": "BUDGET_EXCEEDED",
+          "state": "blocked",
+          "ts": "2026-07-03T05:09:30+00:00"
+        }
+      ],
+      "delivered_fields": null,
+      "delivered_fields_hash": null,
+      "id": "REC-001",
+      "reason_class": "A",
+      "reason_code": "BUDGET_EXCEEDED",
+      "source_format": "feed",
+      "source_version_hash": "sha256:ba4328603b8395cd349035cddb866db55ed25508a4cc1bcc5216a54256415155",
+      "status": "exception",
+      "transcript_hash": null,
+      "version": 1
+    },
+    {
+      "agent_trace": [
+        {
+          "agent": "orchestrator",
+          "cost_usd": 0.0,
+          "detail": "record accepted from intake",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "router",
+          "cost_usd": 0.0,
+          "detail": "easy task; selected gpt-4o-mini",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "router-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "staffing_worker",
+          "cost_usd": 6.555e-05,
+          "latency_ms": 1,
+          "model": "gpt-4o-mini",
+          "prompt_version": "staffing-worker-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 117,
+          "tokens_out": 80,
+          "transcript_hash": "sha256:cb917ae446f19f99df04358beee273e681fe76ecccf283d3b730cc10c9a03840",
+          "verdict": null
+        },
+        {
+          "agent": "orchestrator",
+          "cost_usd": null,
+          "detail": "cost budget exceeded",
+          "latency_ms": null,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "routed",
+          "tokens_in": null,
+          "tokens_out": null,
+          "transcript_hash": null,
+          "verdict": null
+        }
+      ],
+      "approval_trail": [
+        {
+          "actor": "orchestrator",
+          "reason": "BUDGET_EXCEEDED",
+          "state": "blocked",
+          "ts": "2026-07-03T05:09:30+00:00"
+        }
+      ],
+      "delivered_fields": null,
+      "delivered_fields_hash": null,
+      "id": "REC-002",
+      "reason_class": "A",
+      "reason_code": "BUDGET_EXCEEDED",
+      "source_format": "feed",
+      "source_version_hash": "sha256:1d8698839ff3287c18b8eb81feefeb38bed10e2012dedad61d9664de6acd291e",
+      "status": "exception",
+      "transcript_hash": null,
+      "version": 1
+    },
+    {
+      "agent_trace": [
+        {
+          "agent": "orchestrator",
+          "cost_usd": 0.0,
+          "detail": "record accepted from intake",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "router",
+          "cost_usd": 0.0,
+          "detail": "easy task; selected gpt-4o-mini",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "router-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "staffing_worker",
+          "cost_usd": 6.54e-05,
+          "latency_ms": 1,
+          "model": "gpt-4o-mini",
+          "prompt_version": "staffing-worker-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 116,
+          "tokens_out": 80,
+          "transcript_hash": "sha256:96bcca37442f86c2aff1303cbbb381b59a30e12563b561f25f09ede626e07590",
+          "verdict": null
+        },
+        {
+          "agent": "orchestrator",
+          "cost_usd": null,
+          "detail": "cost budget exceeded",
+          "latency_ms": null,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "routed",
+          "tokens_in": null,
+          "tokens_out": null,
+          "transcript_hash": null,
+          "verdict": null
+        }
+      ],
+      "approval_trail": [
+        {
+          "actor": "orchestrator",
+          "reason": "BUDGET_EXCEEDED",
+          "state": "blocked",
+          "ts": "2026-07-03T05:09:30+00:00"
+        }
+      ],
+      "delivered_fields": null,
+      "delivered_fields_hash": null,
+      "id": "REC-003",
+      "reason_class": "A",
+      "reason_code": "BUDGET_EXCEEDED",
+      "source_format": "feed",
+      "source_version_hash": "sha256:85eddec0acc2fa0a138c46ee352a7146bf60723fef2012c7bc1853abb3acf5ec",
+      "status": "exception",
+      "transcript_hash": null,
+      "version": 1
+    },
+    {
+      "agent_trace": [
+        {
+          "agent": "orchestrator",
+          "cost_usd": 0.0,
+          "detail": "record accepted from intake",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "router",
+          "cost_usd": 0.0,
+          "detail": "easy task; selected gpt-4o-mini",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "router-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "staffing_worker",
+          "cost_usd": 6.54e-05,
+          "latency_ms": 1,
+          "model": "gpt-4o-mini",
+          "prompt_version": "staffing-worker-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 116,
+          "tokens_out": 80,
+          "transcript_hash": "sha256:c64b1d36aa2a46cf43193d0c97f3bd0de9aa4c7ad553aef0b30edc0a3057b3ea",
+          "verdict": null
+        },
+        {
+          "agent": "orchestrator",
+          "cost_usd": null,
+          "detail": "cost budget exceeded",
+          "latency_ms": null,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "routed",
+          "tokens_in": null,
+          "tokens_out": null,
+          "transcript_hash": null,
+          "verdict": null
+        }
+      ],
+      "approval_trail": [
+        {
+          "actor": "orchestrator",
+          "reason": "BUDGET_EXCEEDED",
+          "state": "blocked",
+          "ts": "2026-07-03T05:09:30+00:00"
+        }
+      ],
+      "delivered_fields": null,
+      "delivered_fields_hash": null,
+      "id": "REC-004",
+      "reason_class": "A",
+      "reason_code": "BUDGET_EXCEEDED",
+      "source_format": "feed",
+      "source_version_hash": "sha256:7251ac18d9bc7448336f814d7b6ae1a41d54454002388e85ce9db62e4fedd455",
+      "status": "exception",
+      "transcript_hash": null,
+      "version": 1
+    },
+    {
+      "agent_trace": [
+        {
+          "agent": "orchestrator",
+          "cost_usd": 0.0,
+          "detail": "record accepted from intake",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "router",
+          "cost_usd": 0.0,
+          "detail": "easy task; selected gpt-4o-mini",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "router-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "staffing_worker",
+          "cost_usd": 6.555e-05,
+          "latency_ms": 1,
+          "model": "gpt-4o-mini",
+          "prompt_version": "staffing-worker-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 117,
+          "tokens_out": 80,
+          "transcript_hash": "sha256:206b2d8df410c14c9b685a6fd14c6e63464da8336ef1b8cd9e21bf3621390647",
+          "verdict": null
+        },
+        {
+          "agent": "orchestrator",
+          "cost_usd": null,
+          "detail": "cost budget exceeded",
+          "latency_ms": null,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "routed",
+          "tokens_in": null,
+          "tokens_out": null,
+          "transcript_hash": null,
+          "verdict": null
+        }
+      ],
+      "approval_trail": [
+        {
+          "actor": "orchestrator",
+          "reason": "BUDGET_EXCEEDED",
+          "state": "blocked",
+          "ts": "2026-07-03T05:09:30+00:00"
+        }
+      ],
+      "delivered_fields": null,
+      "delivered_fields_hash": null,
+      "id": "REC-005",
+      "reason_class": "A",
+      "reason_code": "BUDGET_EXCEEDED",
+      "source_format": "feed",
+      "source_version_hash": "sha256:a033065af131139bf36b5d1dd3d582f0f0038e4a32b59417a4a9e2d6688b348f",
+      "status": "exception",
+      "transcript_hash": null,
+      "version": 1
+    },
+    {
+      "agent_trace": [
+        {
+          "agent": "orchestrator",
+          "cost_usd": 0.0,
+          "detail": "record accepted from intake",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "router",
+          "cost_usd": 0.0,
+          "detail": "easy task; selected gpt-4o-mini",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "router-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "staffing_worker",
+          "cost_usd": 6.63e-05,
+          "latency_ms": 1,
+          "model": "gpt-4o-mini",
+          "prompt_version": "staffing-worker-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 118,
+          "tokens_out": 81,
+          "transcript_hash": "sha256:b95278baccd8a0a951ec65ee6782fc6fd606c6f1bfded2d4707e098871eac08a",
+          "verdict": null
+        },
+        {
+          "agent": "orchestrator",
+          "cost_usd": null,
+          "detail": "cost budget exceeded",
+          "latency_ms": null,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "routed",
+          "tokens_in": null,
+          "tokens_out": null,
+          "transcript_hash": null,
+          "verdict": null
+        }
+      ],
+      "approval_trail": [
+        {
+          "actor": "orchestrator",
+          "reason": "BUDGET_EXCEEDED",
+          "state": "blocked",
+          "ts": "2026-07-03T05:09:30+00:00"
+        }
+      ],
+      "delivered_fields": null,
+      "delivered_fields_hash": null,
+      "id": "REC-006",
+      "reason_class": "A",
+      "reason_code": "BUDGET_EXCEEDED",
+      "source_format": "eml",
+      "source_version_hash": "sha256:734df6b300ec92bf14cce4ade2b8ba03d77fd8c4bc26e953020eee848a648fe0",
+      "status": "exception",
+      "transcript_hash": null,
+      "version": 1
+    },
+    {
+      "agent_trace": [
+        {
+          "agent": "orchestrator",
+          "cost_usd": 0.0,
+          "detail": "record accepted from intake",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "router",
+          "cost_usd": 0.0,
+          "detail": "easy task; selected gpt-4o-mini",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "router-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "staffing_worker",
+          "cost_usd": 6.585e-05,
+          "latency_ms": 1,
+          "model": "gpt-4o-mini",
+          "prompt_version": "staffing-worker-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 119,
+          "tokens_out": 80,
+          "transcript_hash": "sha256:626090adf396495aa0745e3e9ec4ea262d34c0695aa73345152f2d06bb5d7148",
+          "verdict": null
+        },
+        {
+          "agent": "orchestrator",
+          "cost_usd": null,
+          "detail": "cost budget exceeded",
+          "latency_ms": null,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "routed",
+          "tokens_in": null,
+          "tokens_out": null,
+          "transcript_hash": null,
+          "verdict": null
+        }
+      ],
+      "approval_trail": [
+        {
+          "actor": "orchestrator",
+          "reason": "BUDGET_EXCEEDED",
+          "state": "blocked",
+          "ts": "2026-07-03T05:09:30+00:00"
+        }
+      ],
+      "delivered_fields": null,
+      "delivered_fields_hash": null,
+      "id": "REC-007",
+      "reason_class": "A",
+      "reason_code": "BUDGET_EXCEEDED",
+      "source_format": "pdf",
+      "source_version_hash": "sha256:bba6d7709866386c31fd11602a169e3af196f110265510d9f1b38016ca5bdc41",
+      "status": "exception",
+      "transcript_hash": null,
+      "version": 1
+    },
+    {
+      "agent_trace": [
+        {
+          "agent": "orchestrator",
+          "cost_usd": 0.0,
+          "detail": "record accepted from intake",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "router",
+          "cost_usd": 0.0,
+          "detail": "easy task; selected gpt-4o-mini",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "router-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "staffing_worker",
+          "cost_usd": 6.51e-05,
+          "latency_ms": 1,
+          "model": "gpt-4o-mini",
+          "prompt_version": "staffing-worker-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 114,
+          "tokens_out": 80,
+          "transcript_hash": "sha256:1accea331d0e20802695a5c69471e370990c4d4f6433b86097777f24b08f33db",
+          "verdict": null
+        },
+        {
+          "agent": "orchestrator",
+          "cost_usd": null,
+          "detail": "cost budget exceeded",
+          "latency_ms": null,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "routed",
+          "tokens_in": null,
+          "tokens_out": null,
+          "transcript_hash": null,
+          "verdict": null
+        }
+      ],
+      "approval_trail": [
+        {
+          "actor": "orchestrator",
+          "reason": "BUDGET_EXCEEDED",
+          "state": "blocked",
+          "ts": "2026-07-03T05:09:30+00:00"
+        }
+      ],
+      "delivered_fields": null,
+      "delivered_fields_hash": null,
+      "id": "REC-008",
+      "reason_class": "A",
+      "reason_code": "BUDGET_EXCEEDED",
+      "source_format": "feed",
+      "source_version_hash": "sha256:3687cf2a80566e98bbb5d95d12dd82948850b660c97bc67160d408ba575ed072",
+      "status": "exception",
+      "transcript_hash": null,
+      "version": 1
+    },
+    {
+      "agent_trace": [
+        {
+          "agent": "orchestrator",
+          "cost_usd": 0.0,
+          "detail": "record accepted from intake",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "router",
+          "cost_usd": 0.0,
+          "detail": "easy task; selected gpt-4o-mini",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "router-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "staffing_worker",
+          "cost_usd": 6.72e-05,
+          "latency_ms": 1,
+          "model": "gpt-4o-mini",
+          "prompt_version": "staffing-worker-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 120,
+          "tokens_out": 82,
+          "transcript_hash": "sha256:628d61fed323741d4e223fd02a3ad78ab629e15c615ee359e67570f43d532bfc",
+          "verdict": null
+        },
+        {
+          "agent": "orchestrator",
+          "cost_usd": null,
+          "detail": "cost budget exceeded",
+          "latency_ms": null,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "routed",
+          "tokens_in": null,
+          "tokens_out": null,
+          "transcript_hash": null,
+          "verdict": null
+        }
+      ],
+      "approval_trail": [
+        {
+          "actor": "orchestrator",
+          "reason": "BUDGET_EXCEEDED",
+          "state": "blocked",
+          "ts": "2026-07-03T05:09:30+00:00"
+        }
+      ],
+      "delivered_fields": null,
+      "delivered_fields_hash": null,
+      "id": "REC-009",
+      "reason_class": "A",
+      "reason_code": "BUDGET_EXCEEDED",
+      "source_format": "feed",
+      "source_version_hash": "sha256:726acd80e3873e44b349884922853198ceb7c0d1ba37d8695a29659e6770d798",
+      "status": "exception",
+      "transcript_hash": null,
+      "version": 1
+    },
+    {
+      "agent_trace": [
+        {
+          "agent": "orchestrator",
+          "cost_usd": 0.0,
+          "detail": "record accepted from intake",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "router",
+          "cost_usd": 0.0,
+          "detail": "easy task; selected gpt-4o-mini",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "router-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "staffing_worker",
+          "cost_usd": 6.51e-05,
+          "latency_ms": 1,
+          "model": "gpt-4o-mini",
+          "prompt_version": "staffing-worker-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 114,
+          "tokens_out": 80,
+          "transcript_hash": "sha256:2cc8579bb70d922bf1e8eb37859e05fcff5393352b2845d828f4f3c64116c3cb",
+          "verdict": null
+        },
+        {
+          "agent": "orchestrator",
+          "cost_usd": null,
+          "detail": "cost budget exceeded",
+          "latency_ms": null,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "routed",
+          "tokens_in": null,
+          "tokens_out": null,
+          "transcript_hash": null,
+          "verdict": null
+        }
+      ],
+      "approval_trail": [
+        {
+          "actor": "orchestrator",
+          "reason": "BUDGET_EXCEEDED",
+          "state": "blocked",
+          "ts": "2026-07-03T05:09:30+00:00"
+        }
+      ],
+      "delivered_fields": null,
+      "delivered_fields_hash": null,
+      "id": "REC-010",
+      "reason_class": "A",
+      "reason_code": "BUDGET_EXCEEDED",
+      "source_format": "pdf",
+      "source_version_hash": "sha256:59b54fffa065aa498dfa39bbbc84395652f73284dc7177cec23bbb2b70c404f7",
+      "status": "exception",
+      "transcript_hash": null,
+      "version": 1
+    },
+    {
+      "agent_trace": [
+        {
+          "agent": "orchestrator",
+          "cost_usd": 0.0,
+          "detail": "record accepted from intake",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "orchestrator",
+          "cost_usd": 0.0,
+          "detail": "routed to exception queue: STALE",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "routed",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        }
+      ],
+      "approval_trail": [
+        {
+          "actor": "orchestrator",
+          "reason": "STALE",
+          "state": "blocked",
+          "ts": "2026-07-03T05:09:30+00:00"
+        }
+      ],
+      "delivered_fields": null,
+      "delivered_fields_hash": null,
+      "id": "REC-011",
+      "reason_class": "A",
+      "reason_code": "STALE",
+      "source_format": "feed",
+      "source_version_hash": "sha256:7be77b7b06c1a8e589a4a544b73049ee5d1ae4c8846b0da930994a522ede0fd4",
+      "status": "exception",
+      "transcript_hash": null,
+      "version": 1
+    },
+    {
+      "agent_trace": [
+        {
+          "agent": "orchestrator",
+          "cost_usd": 0.0,
+          "detail": "record accepted from intake",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "orchestrator",
+          "cost_usd": 0.0,
+          "detail": "routed to exception queue: MISSING_INPUT",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "routed",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        }
+      ],
+      "approval_trail": [
+        {
+          "actor": "orchestrator",
+          "reason": "MISSING_INPUT",
+          "state": "blocked",
+          "ts": "2026-07-03T05:09:30+00:00"
+        }
+      ],
+      "delivered_fields": null,
+      "delivered_fields_hash": null,
+      "id": "REC-012",
+      "reason_class": "A",
+      "reason_code": "MISSING_INPUT",
+      "source_format": "feed",
+      "source_version_hash": "sha256:46ce4d7e303cb49e2301c29d40b39e622879115098bcfa0e7ff0f9d98367f661",
+      "status": "exception",
+      "transcript_hash": null,
+      "version": 1
+    },
+    {
+      "agent_trace": [
+        {
+          "agent": "orchestrator",
+          "cost_usd": 0.0,
+          "detail": "record accepted from intake",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "orchestrator",
+          "cost_usd": 0.0,
+          "detail": "routed to exception queue: OUTLIER",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "routed",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        }
+      ],
+      "approval_trail": [
+        {
+          "actor": "orchestrator",
+          "reason": "OUTLIER",
+          "state": "blocked",
+          "ts": "2026-07-03T05:09:30+00:00"
+        }
+      ],
+      "delivered_fields": null,
+      "delivered_fields_hash": null,
+      "id": "REC-013",
+      "reason_class": "A",
+      "reason_code": "OUTLIER",
+      "source_format": "feed",
+      "source_version_hash": "sha256:6762f861b3ad0e04d296ede7fb75d3ce8bd6d615fe2fb7c9d66f5ee8a9cb2429",
+      "status": "exception",
+      "transcript_hash": null,
+      "version": 1
+    },
+    {
+      "agent_trace": [
+        {
+          "agent": "orchestrator",
+          "cost_usd": 0.0,
+          "detail": "record accepted from intake",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "orchestrator",
+          "cost_usd": 0.0,
+          "detail": "routed to exception queue: INJECTION_BLOCKED",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "routed",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        }
+      ],
+      "approval_trail": [
+        {
+          "actor": "orchestrator",
+          "reason": "INJECTION_BLOCKED",
+          "state": "blocked",
+          "ts": "2026-07-03T05:09:30+00:00"
+        }
+      ],
+      "delivered_fields": null,
+      "delivered_fields_hash": null,
+      "id": "REC-014",
+      "reason_class": "A",
+      "reason_code": "INJECTION_BLOCKED",
+      "source_format": "eml",
+      "source_version_hash": "sha256:c05806bea23684e50a4f9e23701956d031994e1ba0cd7e1e0f12345bdb61f6d9",
+      "status": "exception",
+      "transcript_hash": null,
+      "version": 1
+    },
+    {
+      "agent_trace": [
+        {
+          "agent": "orchestrator",
+          "cost_usd": 0.0,
+          "detail": "record accepted from intake",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "orchestrator",
+          "cost_usd": 0.0,
+          "detail": "routed to exception queue: LOW_CONFIDENCE",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "routed",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        }
+      ],
+      "approval_trail": [
+        {
+          "actor": "orchestrator",
+          "reason": "LOW_CONFIDENCE",
+          "state": "blocked",
+          "ts": "2026-07-03T05:09:30+00:00"
+        }
+      ],
+      "delivered_fields": null,
+      "delivered_fields_hash": null,
+      "id": "REC-015",
+      "reason_class": "A",
+      "reason_code": "LOW_CONFIDENCE",
+      "source_format": "pdf",
+      "source_version_hash": "sha256:a499090bbc37ce714c057b598a72ba850c6358363a97094613f4fc0e3add7696",
+      "status": "exception",
+      "transcript_hash": null,
+      "version": 1
+    },
+    {
+      "agent_trace": [
+        {
+          "agent": "orchestrator",
+          "cost_usd": 0.0,
+          "detail": "record accepted from intake",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "router",
+          "cost_usd": 0.0,
+          "detail": "hard/escalated task; selected gemini-1.5-flash",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "router-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "staffing_worker",
+          "cost_usd": 3.42e-05,
+          "latency_ms": 1,
+          "model": "gemini-1.5-flash",
+          "prompt_version": "staffing-worker-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 132,
+          "tokens_out": 81,
+          "transcript_hash": "sha256:157e9d808bbc87bece0f06edaebd2d380da0783510c2da0c9639ac7c9253f600",
+          "verdict": null
+        },
+        {
+          "agent": "orchestrator",
+          "cost_usd": null,
+          "detail": "cost budget exceeded",
+          "latency_ms": null,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "routed",
+          "tokens_in": null,
+          "tokens_out": null,
+          "transcript_hash": null,
+          "verdict": null
+        }
+      ],
+      "approval_trail": [
+        {
+          "actor": "orchestrator",
+          "reason": "BUDGET_EXCEEDED",
+          "state": "blocked",
+          "ts": "2026-07-03T05:09:30+00:00"
+        }
+      ],
+      "delivered_fields": null,
+      "delivered_fields_hash": null,
+      "id": "REC-016",
+      "reason_class": "A",
+      "reason_code": "BUDGET_EXCEEDED",
+      "source_format": "eml",
+      "source_version_hash": "sha256:d57f37a5b037b16c9ba2314ad1206b05a0adf0670c0d37248e229497c572b68a",
+      "status": "exception",
+      "transcript_hash": null,
+      "version": 1
+    },
+    {
+      "agent_trace": [],
+      "approval_trail": [
+        {
+          "actor": "orchestrator",
+          "reason": "SUPERSEDED_VERSION",
+          "state": "blocked",
+          "ts": "2026-07-03T05:09:30+00:00"
+        }
+      ],
+      "delivered_fields": null,
+      "delivered_fields_hash": null,
+      "id": "REC-017",
+      "reason_class": "B",
+      "reason_code": "SUPERSEDED_VERSION",
+      "source_format": "feed",
+      "source_version_hash": "sha256:16eadfe37f771b78a70368e1535c58caca7d49d1e76a4df5a21f59929a125ffe",
+      "status": "superseded",
+      "transcript_hash": null,
+      "version": 1
+    },
+    {
+      "agent_trace": [
+        {
+          "agent": "orchestrator",
+          "cost_usd": 0.0,
+          "detail": "record accepted from intake",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "router",
+          "cost_usd": 0.0,
+          "detail": "hard/escalated task; selected gemini-1.5-flash",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "router-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "staffing_worker",
+          "cost_usd": 3.285e-05,
+          "latency_ms": 1,
+          "model": "gemini-1.5-flash",
+          "prompt_version": "staffing-worker-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 118,
+          "tokens_out": 80,
+          "transcript_hash": "sha256:342b566bb6c42a9c2b4309c97788fe3ed1aac4ad14c4e7fde0cb4d2190a70539",
+          "verdict": null
+        },
+        {
+          "agent": "orchestrator",
+          "cost_usd": null,
+          "detail": "cost budget exceeded",
+          "latency_ms": null,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "routed",
+          "tokens_in": null,
+          "tokens_out": null,
+          "transcript_hash": null,
+          "verdict": null
+        }
+      ],
+      "approval_trail": [
+        {
+          "actor": "orchestrator",
+          "reason": "BUDGET_EXCEEDED",
+          "state": "blocked",
+          "ts": "2026-07-03T05:09:30+00:00"
+        }
+      ],
+      "delivered_fields": null,
+      "delivered_fields_hash": null,
+      "id": "REC-017",
+      "reason_class": "A",
+      "reason_code": "BUDGET_EXCEEDED",
+      "source_format": "pdf",
+      "source_version_hash": "sha256:f2cfd5b8709769e5e7338922952f2b38ac542069c552a0afb2ec37b99ddebd97",
+      "status": "exception",
+      "transcript_hash": null,
+      "version": 2
+    },
+    {
+      "agent_trace": [
+        {
+          "agent": "orchestrator",
+          "cost_usd": 0.0,
+          "detail": "record accepted from intake",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "router",
+          "cost_usd": 0.0,
+          "detail": "easy task; selected gpt-4o-mini",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "router-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "staffing_worker",
+          "cost_usd": 6.585e-05,
+          "latency_ms": 1,
+          "model": "gpt-4o-mini",
+          "prompt_version": "staffing-worker-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 115,
+          "tokens_out": 81,
+          "transcript_hash": "sha256:5370eedf5ee66850a1b85e50350b6be14276b62c61b641802ed25fc7a27aa2c3",
+          "verdict": null
+        },
+        {
+          "agent": "orchestrator",
+          "cost_usd": null,
+          "detail": "cost budget exceeded",
+          "latency_ms": null,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "routed",
+          "tokens_in": null,
+          "tokens_out": null,
+          "transcript_hash": null,
+          "verdict": null
+        }
+      ],
+      "approval_trail": [
+        {
+          "actor": "orchestrator",
+          "reason": "BUDGET_EXCEEDED",
+          "state": "blocked",
+          "ts": "2026-07-03T05:09:30+00:00"
+        }
+      ],
+      "delivered_fields": null,
+      "delivered_fields_hash": null,
+      "id": "REC-018",
+      "reason_class": "A",
+      "reason_code": "BUDGET_EXCEEDED",
+      "source_format": "feed",
+      "source_version_hash": "sha256:0d196312ee0a8bb8555c7c1ceabb5c761567334446dcde07e7c55fec4033a0e3",
+      "status": "exception",
+      "transcript_hash": null,
+      "version": 1
+    },
+    {
+      "agent_trace": [
+        {
+          "agent": "orchestrator",
+          "cost_usd": 0.0,
+          "detail": "record accepted from intake",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "router",
+          "cost_usd": 0.0,
+          "detail": "easy task; selected gpt-4o-mini",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "router-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "staffing_worker",
+          "cost_usd": 6.69e-05,
+          "latency_ms": 1,
+          "model": "gpt-4o-mini",
+          "prompt_version": "staffing-worker-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 118,
+          "tokens_out": 82,
+          "transcript_hash": "sha256:20153e83060800d4ad1c8b54e0b7d9afe71f321d3f6dd7589065f2c9439aaa1c",
+          "verdict": null
+        },
+        {
+          "agent": "orchestrator",
+          "cost_usd": null,
+          "detail": "cost budget exceeded",
+          "latency_ms": null,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "routed",
+          "tokens_in": null,
+          "tokens_out": null,
+          "transcript_hash": null,
+          "verdict": null
+        }
+      ],
+      "approval_trail": [
+        {
+          "actor": "orchestrator",
+          "reason": "BUDGET_EXCEEDED",
+          "state": "blocked",
+          "ts": "2026-07-03T05:09:30+00:00"
+        }
+      ],
+      "delivered_fields": null,
+      "delivered_fields_hash": null,
+      "id": "REC-019",
+      "reason_class": "A",
+      "reason_code": "BUDGET_EXCEEDED",
+      "source_format": "feed",
+      "source_version_hash": "sha256:ba0d933e12acdacc10f9426f7c8f9cfe8dc1de96149976e9e3f0c253eab96902",
+      "status": "exception",
+      "transcript_hash": null,
+      "version": 1
+    },
+    {
+      "agent_trace": [
+        {
+          "agent": "orchestrator",
+          "cost_usd": 0.0,
+          "detail": "record accepted from intake",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "router",
+          "cost_usd": 0.0,
+          "detail": "easy task; selected gpt-4o-mini",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "router-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "staffing_worker",
+          "cost_usd": 6.51e-05,
+          "latency_ms": 1,
+          "model": "gpt-4o-mini",
+          "prompt_version": "staffing-worker-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 114,
+          "tokens_out": 80,
+          "transcript_hash": "sha256:26ea6c657cac60468d4149dfd2a480d0cc35942d5bbbec58aab4cf5e6ec29fd3",
+          "verdict": null
+        },
+        {
+          "agent": "orchestrator",
+          "cost_usd": null,
+          "detail": "cost budget exceeded",
+          "latency_ms": null,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "routed",
+          "tokens_in": null,
+          "tokens_out": null,
+          "transcript_hash": null,
+          "verdict": null
+        }
+      ],
+      "approval_trail": [
+        {
+          "actor": "orchestrator",
+          "reason": "BUDGET_EXCEEDED",
+          "state": "blocked",
+          "ts": "2026-07-03T05:09:30+00:00"
+        }
+      ],
+      "delivered_fields": null,
+      "delivered_fields_hash": null,
+      "id": "REC-020",
+      "reason_class": "A",
+      "reason_code": "BUDGET_EXCEEDED",
+      "source_format": "feed",
+      "source_version_hash": "sha256:b021587acd03501f75b2bcd6ee5e9c1f8754ea75adc07868355d9786b1a260ba",
+      "status": "exception",
+      "transcript_hash": null,
+      "version": 1
+    },
+    {
+      "agent_trace": [
+        {
+          "agent": "orchestrator",
+          "cost_usd": 0.0,
+          "detail": "record accepted from intake",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "orchestrator",
+          "cost_usd": 0.0,
+          "detail": "routed to exception queue: LOW_CONFIDENCE",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "routed",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        }
+      ],
+      "approval_trail": [
+        {
+          "actor": "orchestrator",
+          "reason": "LOW_CONFIDENCE",
+          "state": "blocked",
+          "ts": "2026-07-03T05:09:30+00:00"
+        }
+      ],
+      "delivered_fields": null,
+      "delivered_fields_hash": null,
+      "id": "REC-021",
+      "reason_class": "A",
+      "reason_code": "LOW_CONFIDENCE",
+      "source_format": "feed",
+      "source_version_hash": "sha256:6c31b41ddce2721bbf39c878772b039453be6a84d7b54d51eed4177e0c53ed13",
+      "status": "exception",
+      "transcript_hash": null,
+      "version": 1
+    },
+    {
+      "agent_trace": [
+        {
+          "agent": "orchestrator",
+          "cost_usd": 0.0,
+          "detail": "record accepted from intake",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "ok",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        },
+        {
+          "agent": "orchestrator",
+          "cost_usd": 0.0,
+          "detail": "routed to exception queue: UNVERIFIED_ANOMALY",
+          "latency_ms": 1,
+          "model": null,
+          "prompt_version": "orchestrator-v1",
+          "retries": 0,
+          "status": "routed",
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "transcript_hash": null,
+          "verdict": null
+        }
+      ],
+      "approval_trail": [
+        {
+          "actor": "orchestrator",
+          "reason": "UNVERIFIED_ANOMALY",
+          "state": "blocked",
+          "ts": "2026-07-03T05:09:30+00:00"
+        }
+      ],
+      "delivered_fields": null,
+      "delivered_fields_hash": null,
+      "id": "REC-022",
+      "reason_class": "A",
+      "reason_code": "UNVERIFIED_ANOMALY",
+      "source_format": "feed",
+      "source_version_hash": "sha256:3bc9a915ce555a26a00d6c5f665c74e892c4caacb2c91edc4d24f993d9c6ed03",
+      "status": "exception",
+      "transcript_hash": null,
+      "version": 1
+    }
+  ],
+  "seed_dir": "seed"
+}

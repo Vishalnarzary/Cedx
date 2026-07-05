@@ -1,0 +1,43 @@
+{
+  "agent": "staffing_worker",
+  "delivered_fields_hash": "sha256:dfe394b18c6e376944160183043b8fcb9e7f571922bcd9865820a5ab26eac199",
+  "model": "gpt-4o-mini",
+  "prompt_version": "staffing-worker-v1",
+  "request": {
+    "format": "toon",
+    "json_for_audit": {
+      "agent": "staffing_worker",
+      "model": "gpt-4o-mini",
+      "prompt_version": "staffing-worker-v1",
+      "record": {
+        "amount": 6100.0,
+        "category": "REPORT",
+        "deadline": "2026-08-01",
+        "id": "REC-004",
+        "notes": "Monthly report bundle.",
+        "owner": "d.kapoor",
+        "source_format": "feed",
+        "source_version_hash": "sha256:7251ac18d9bc7448336f814d7b6ae1a41d54454002388e85ce9db62e4fedd455",
+        "version": 1
+      },
+      "task": "Create a Recruitment and Staffing delivery record using only source-supported fields."
+    },
+    "toon": "agent: staffing_worker\nmodel: gpt-4o-mini\nprompt_version: staffing-worker-v1\nrecord.amount: 6100.0\nrecord.category: REPORT\nrecord.deadline: 2026-08-01\nrecord.id: REC-004\nrecord.notes: Monthly report bundle.\nrecord.owner: d.kapoor\nrecord.source_format: feed\nrecord.source_version_hash: sha256:7251ac18d9bc7448336f814d7b6ae1a41d54454002388e85ce9db62e4fedd455\nrecord.version: 1\ntask: Create a Recruitment and Staffing delivery record using only source-supported fields."
+  },
+  "request_format": "toon",
+  "response": {
+    "confidence": 0.97,
+    "delivered_fields": {
+      "case_id": "REC-004",
+      "deadline": "2026-08-01",
+      "industry": "Recruitment and Staffing",
+      "owner": "d.kapoor",
+      "service_line": "REPORT",
+      "source_version": 1,
+      "staffing_summary": "REPORT request for d.kapoor with amount 6100.",
+      "work_order_amount": 6100.0
+    },
+    "unsupported_claims": []
+  },
+  "response_hash": "sha256:c64b1d36aa2a46cf43193d0c97f3bd0de9aa4c7ad553aef0b30edc0a3057b3ea"
+}

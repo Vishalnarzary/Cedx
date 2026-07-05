@@ -1,0 +1,43 @@
+{
+  "agent": "staffing_worker",
+  "delivered_fields_hash": "sha256:48671e01df33ea495efc171b32757b470c3a8bf297ea8d3a024467a5992e0188",
+  "model": "gpt-4o-mini",
+  "prompt_version": "staffing-worker-v1",
+  "request": {
+    "format": "toon",
+    "json_for_audit": {
+      "agent": "staffing_worker",
+      "model": "gpt-4o-mini",
+      "prompt_version": "staffing-worker-v1",
+      "record": {
+        "amount": 5150.0,
+        "category": "REVIEW",
+        "deadline": "2026-08-03",
+        "id": "REC-018",
+        "notes": "Routine review.",
+        "owner": "r.ferreira",
+        "source_format": "feed",
+        "source_version_hash": "sha256:0d196312ee0a8bb8555c7c1ceabb5c761567334446dcde07e7c55fec4033a0e3",
+        "version": 1
+      },
+      "task": "Create a Recruitment and Staffing delivery record using only source-supported fields."
+    },
+    "toon": "agent: staffing_worker\nmodel: gpt-4o-mini\nprompt_version: staffing-worker-v1\nrecord.amount: 5150.0\nrecord.category: REVIEW\nrecord.deadline: 2026-08-03\nrecord.id: REC-018\nrecord.notes: Routine review.\nrecord.owner: r.ferreira\nrecord.source_format: feed\nrecord.source_version_hash: sha256:0d196312ee0a8bb8555c7c1ceabb5c761567334446dcde07e7c55fec4033a0e3\nrecord.version: 1\ntask: Create a Recruitment and Staffing delivery record using only source-supported fields."
+  },
+  "request_format": "toon",
+  "response": {
+    "confidence": 0.97,
+    "delivered_fields": {
+      "case_id": "REC-018",
+      "deadline": "2026-08-03",
+      "industry": "Recruitment and Staffing",
+      "owner": "r.ferreira",
+      "service_line": "REVIEW",
+      "source_version": 1,
+      "staffing_summary": "REVIEW request for r.ferreira with amount 5150.",
+      "work_order_amount": 5150.0
+    },
+    "unsupported_claims": []
+  },
+  "response_hash": "sha256:5370eedf5ee66850a1b85e50350b6be14276b62c61b641802ed25fc7a27aa2c3"
+}

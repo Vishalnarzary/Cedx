@@ -1,0 +1,43 @@
+{
+  "agent": "staffing_worker",
+  "delivered_fields_hash": "sha256:b1a6fcee1be53ddcc612945ebd68dbc0efbf376470261892677e16a1826e8703",
+  "model": "gpt-4o-mini",
+  "prompt_version": "staffing-worker-v1",
+  "request": {
+    "format": "toon",
+    "json_for_audit": {
+      "agent": "staffing_worker",
+      "model": "gpt-4o-mini",
+      "prompt_version": "staffing-worker-v1",
+      "record": {
+        "amount": 4850.0,
+        "category": "ONBOARDING",
+        "deadline": "2026-07-27",
+        "id": "REC-019",
+        "notes": "Onboarding pack complete.",
+        "owner": "s.haque",
+        "source_format": "feed",
+        "source_version_hash": "sha256:ba0d933e12acdacc10f9426f7c8f9cfe8dc1de96149976e9e3f0c253eab96902",
+        "version": 1
+      },
+      "task": "Create a Recruitment and Staffing delivery record using only source-supported fields."
+    },
+    "toon": "agent: staffing_worker\nmodel: gpt-4o-mini\nprompt_version: staffing-worker-v1\nrecord.amount: 4850.0\nrecord.category: ONBOARDING\nrecord.deadline: 2026-07-27\nrecord.id: REC-019\nrecord.notes: Onboarding pack complete.\nrecord.owner: s.haque\nrecord.source_format: feed\nrecord.source_version_hash: sha256:ba0d933e12acdacc10f9426f7c8f9cfe8dc1de96149976e9e3f0c253eab96902\nrecord.version: 1\ntask: Create a Recruitment and Staffing delivery record using only source-supported fields."
+  },
+  "request_format": "toon",
+  "response": {
+    "confidence": 0.97,
+    "delivered_fields": {
+      "case_id": "REC-019",
+      "deadline": "2026-07-27",
+      "industry": "Recruitment and Staffing",
+      "owner": "s.haque",
+      "service_line": "ONBOARDING",
+      "source_version": 1,
+      "staffing_summary": "ONBOARDING request for s.haque with amount 4850.",
+      "work_order_amount": 4850.0
+    },
+    "unsupported_claims": []
+  },
+  "response_hash": "sha256:20153e83060800d4ad1c8b54e0b7d9afe71f321d3f6dd7589065f2c9439aaa1c"
+}

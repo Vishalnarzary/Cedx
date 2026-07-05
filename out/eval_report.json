@@ -1,0 +1,64 @@
+{
+  "results": [
+    {
+      "agent": "orchestrator",
+      "detail": "STALE",
+      "name": "stale deadline routes STALE",
+      "ok": true
+    },
+    {
+      "agent": "orchestrator",
+      "detail": "MISSING_INPUT",
+      "name": "missing amount routes MISSING_INPUT",
+      "ok": true
+    },
+    {
+      "agent": "orchestrator",
+      "detail": "INJECTION_BLOCKED",
+      "name": "prompt injection routes INJECTION_BLOCKED",
+      "ok": true
+    },
+    {
+      "agent": "orchestrator",
+      "detail": "LOW_CONFIDENCE",
+      "name": "unknown category routes LOW_CONFIDENCE",
+      "ok": true
+    },
+    {
+      "agent": "orchestrator",
+      "detail": "UNVERIFIED_ANOMALY",
+      "name": "conflicting override note routes UNVERIFIED_ANOMALY",
+      "ok": true
+    },
+    {
+      "agent": "orchestrator",
+      "detail": "SCHEMA_DRIFT/B",
+      "name": "schema alias produces SCHEMA_DRIFT",
+      "ok": true
+    },
+    {
+      "agent": "router",
+      "detail": "gpt-4o-mini",
+      "name": "router sends easy record to gpt-4o-mini",
+      "ok": true
+    },
+    {
+      "agent": "router",
+      "detail": "gemini-1.5-flash",
+      "name": "router sends hard record to gemini-1.5-flash",
+      "ok": true
+    },
+    {
+      "agent": "verifier",
+      "detail": "None",
+      "name": "verifier passes grounded worker output",
+      "ok": true
+    },
+    {
+      "agent": "verifier",
+      "detail": "AGENT_HALLUCINATION",
+      "name": "verifier rejects hallucinated worker output",
+      "ok": true
+    }
+  ]
+}

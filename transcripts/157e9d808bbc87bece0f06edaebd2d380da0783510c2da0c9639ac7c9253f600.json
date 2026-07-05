@@ -1,0 +1,46 @@
+{
+  "agent": "staffing_worker",
+  "delivered_fields_hash": "sha256:920ef60084edb94e38f5b1f93e78fd4dbf5306e563a4608989c6578f9ad067f1",
+  "model": "gemini-1.5-flash",
+  "prompt_version": "staffing-worker-v1",
+  "request": {
+    "format": "toon",
+    "json_for_audit": {
+      "agent": "staffing_worker",
+      "model": "gemini-1.5-flash",
+      "prompt_version": "staffing-worker-v1",
+      "record": {
+        "amount": 4750.0,
+        "category": "RENEWAL",
+        "deadline": "2026-07-23",
+        "id": "REC-016",
+        "normalization_notes": [
+          "mapped value to amount"
+        ],
+        "notes": "Renewal via partner feed.",
+        "owner": "p.larsen",
+        "source_format": "eml",
+        "source_version_hash": "sha256:d57f37a5b037b16c9ba2314ad1206b05a0adf0670c0d37248e229497c572b68a",
+        "version": 1
+      },
+      "task": "Create a Recruitment and Staffing delivery record using only source-supported fields."
+    },
+    "toon": "agent: staffing_worker\nmodel: gemini-1.5-flash\nprompt_version: staffing-worker-v1\nrecord.amount: 4750.0\nrecord.category: RENEWAL\nrecord.deadline: 2026-07-23\nrecord.id: REC-016\nrecord.normalization_notes[0]: mapped value to amount\nrecord.notes: Renewal via partner feed.\nrecord.owner: p.larsen\nrecord.source_format: eml\nrecord.source_version_hash: sha256:d57f37a5b037b16c9ba2314ad1206b05a0adf0670c0d37248e229497c572b68a\nrecord.version: 1\ntask: Create a Recruitment and Staffing delivery record using only source-supported fields."
+  },
+  "request_format": "toon",
+  "response": {
+    "confidence": 0.97,
+    "delivered_fields": {
+      "case_id": "REC-016",
+      "deadline": "2026-07-23",
+      "industry": "Recruitment and Staffing",
+      "owner": "p.larsen",
+      "service_line": "RENEWAL",
+      "source_version": 1,
+      "staffing_summary": "RENEWAL request for p.larsen with amount 4750.",
+      "work_order_amount": 4750.0
+    },
+    "unsupported_claims": []
+  },
+  "response_hash": "sha256:157e9d808bbc87bece0f06edaebd2d380da0783510c2da0c9639ac7c9253f600"
+}

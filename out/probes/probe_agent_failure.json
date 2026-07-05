@@ -1,0 +1,38 @@
+{
+  "hallucination": {
+    "reason": "AGENT_HALLUCINATION",
+    "span": {
+      "agent": "verifier",
+      "cost_usd": 3e-05,
+      "detail": "owner not supported by source",
+      "latency_ms": 12,
+      "model": "gpt-4o-mini",
+      "prompt_version": "verifier-v1",
+      "retries": 0,
+      "status": "overruled",
+      "tokens_in": 80,
+      "tokens_out": 30,
+      "transcript_hash": null,
+      "verdict": "fail"
+    },
+    "verifier_ok": false
+  },
+  "malformed": {
+    "reason": "AGENT_MALFORMED",
+    "span": {
+      "agent": "verifier",
+      "cost_usd": 3e-05,
+      "detail": "worker output is not structured JSON",
+      "latency_ms": 12,
+      "model": "gpt-4o-mini",
+      "prompt_version": "verifier-v1",
+      "retries": 0,
+      "status": "rejected",
+      "tokens_in": 80,
+      "tokens_out": 30,
+      "transcript_hash": null,
+      "verdict": "fail"
+    },
+    "verifier_ok": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "version": "field-mapping-v1",
+  "canonical": {
+    "amount": ["amount", "value"],
+    "category": ["category"],
+    "deadline": ["deadline"],
+    "id": ["id"],
+    "notes": ["notes"],
+    "owner": ["owner"],
+    "version": ["version"]
+  }
+}
